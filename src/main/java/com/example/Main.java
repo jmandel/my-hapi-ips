@@ -22,8 +22,6 @@ public class Main {
         IIdType patientId = patient.getIdElement();
         IpsGeneratorSvcImpl ipsGeneratorSvc = new IpsGeneratorSvcImpl(FhirContext.forR4(), strategy);
         IBaseBundle ipsBundle = ipsGeneratorSvc.generateIps(new SimpleRequestDetails(null, "https://example.org/fhir"), patientId, jsonFolderPath);
-        
-        // Output the IPS Bundle as JSON
         FhirContext fhirContext = FhirContext.forR4();
         String bundleJson = fhirContext.newJsonParser().setPrettyPrint(true).encodeResourceToString(ipsBundle);
         System.out.println(bundleJson);
