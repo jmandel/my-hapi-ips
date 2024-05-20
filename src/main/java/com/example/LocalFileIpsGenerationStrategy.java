@@ -67,7 +67,7 @@ public class LocalFileIpsGenerationStrategy extends BaseIpsGenerationStrategy {
         addSection("Medical Devices", DeviceUseStatement.class, null);
         addSection("Diagnostic Results", List.of(DiagnosticReport.class, Observation.class), null);
         addSection("Vital Signs", Observation.class, null);
-        addSection("Pregnancy Information", Observation.class, null);
+        // addSection("Pregnancy Information", Observation.class, null);
         addSection("Social History", Observation.class, null);
         addSection("History of Past Illness", Condition.class, null);
         addSection("Functional Status", ClinicalImpression.class, null);
